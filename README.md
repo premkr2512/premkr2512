@@ -25,3 +25,27 @@ from datetime import datetime , date
 #Current_day = day[date.today().weekday()]
 #Current_time =datetime.now().strftime("%H:%M")
 #print(Current_time)
+
+
+while True:
+    c = -1
+    c1 = -1
+    Current_day = day[date.today().weekday()]
+    Current_time =datetime.now().strftime("%H:%M")
+    for i in menu['day']:
+        c1+=1
+        if i == Current_day:
+            for j in time1:
+                c+=1
+                if j ==Current_time:
+                    now_time= datetime.now().strftime("%H:%M")
+                    print(now_time)
+                    wish_me()
+                    t1 = time1[c]
+                    s = menu[t1]
+                    speak("wake up sir It's your time")
+                    speak(s[c1])
+                    #speak(menu['i'].values[c1])
+                    #print(menu['i'].values[c1])
+                    break
+    break
